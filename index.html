@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE127 - Mines VIP Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Yuqori qism (Status) -->
+        <header class="header">
+            <div class="logo">BE127 <span class="badge">MINES VIP</span></div>
+            <div class="status-bar">
+                <span class="dot"></span> Online
+            </div>
+        </header>
+
+        <!-- Mina sonini tanlash -->
+        <div class="settings-card">
+            <label>Minalar sonini tanlang:</label>
+            <div class="mines-select">
+                <button class="mine-btn active" onclick="setMines(1)">1</button>
+                <button class="mine-btn" onclick="setMines(3)">3</button>
+                <button class="mine-btn" onclick="setMines(5)">5</button>
+                <button class="mine-btn" onclick="setMines(7)">7</button>
+            </div>
+        </div>
+
+        <!-- 5x5 Mines Maydoni -->
+        <div class="grid-container" id="minesGrid">
+            <!-- JavaScript orqali kataklar generatsiya qilinadi -->
+        </div>
+
+        <!-- Tahlil koʻrsatkichi -->
+        <div class="stats-info">
+            <span>Aniqlik: <strong id="accuracy">98.4%</strong></span>
+            <span>Promo: <strong>BE127</strong></span>
+        </div>
+
+        <!-- Signal olish tugmasi -->
+        <button class="signal-btn" onclick="getSignal()">SIGNAL OLISH 💎</button>
+        
+        <div class="footer">POWERD BY THEEAGLE</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
